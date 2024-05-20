@@ -1,0 +1,409 @@
+1.Create a function that takes two numbers as arguments and returns their sum.
+
+let a = +prompt("enter 1st number")
+let b= +prompt("enter 2nd number")
+function sumofab(a,b){
+    return a+b;
+}
+console.log(sumofab(a,b))
+
+o/p:
+
+enter 1st number10
+enter 2nd number20
+30
+
+
+2.Write a function that takes an integer minutes and converts it to seconds.
+
+var min = +prompt("enter minutes  ")
+function minutestoseconds(min)
+{
+    return min*60;
+}
+console.log(minutestoseconds(min))
+
+o/p:
+enter minutes  60
+3600
+
+
+3.Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+
+var number = +prompt("enter a number for increment  ")
+function increment(number)
+{
+    number++;
+    return number;
+}
+console.log(increment(number))
+
+o/p:
+
+enter a number for increment  4
+5
+
+4.Create a function that takes the age in years and returns the age in days.
+
+var age = +prompt("enter age  ")
+function ageyearintodays(age)
+{
+    
+    return age*365;
+}
+console.log(ageyearintodays(age))
+
+o/p:
+
+enter age  10
+3650
+
+
+5.sniCreate a function that takes voltage and current and returns the calculated power.
+
+var voltage = +prompt("enter voltage  ")
+
+var current = +prompt("enter current  ")
+
+function power(voltage,current)
+{
+    return voltage*current;
+}
+
+console.log(power(voltage,current));
+
+
+o/p:
+
+enter voltage 5
+enter current 5
+25
+
+6.Write a function that returns the string "something" joined with a space " " and the given argument a.
+
+var text = prompt("enter some text")
+function textintogreeting(text)
+{
+return "something" + " " + text;
+}
+console.log(textintogreeting(text))
+
+o/p:
+enter some text: hi
+something hi
+
+
+7.Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.
+
+var a=+prompt("enter a number");
+var b=+prompt("enter another number");
+function both_sum_same(a,b){
+    return ((a===10)||(b==10)) || (a+b === 10)
+}
+console.log(both_sum_same(a,b));
+
+o/p:
+enter a number5
+enter another number5
+true
+
+8.Create a function that takes two strings as arguments and returns either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+
+var str1=prompt("enter a string :")
+var str2=prompt("enter a string :")
+
+function stringsameornor(str1,str2){
+    // return str1.length === str2.length ;
+    
+    var count1 = 0;
+    for (let i of str1){
+        count1++;
+    }
+    var count2=0;
+    for (let j of str2){
+        count2++;
+    }
+    return count1 == count2;
+}
+
+console.log(stringsameornor(str1,str2));
+
+o/p:
+
+enter a string :mutton
+enter a string :prawns
+true
+
+9.Create a function that takes a name and returns a greeting in the form of a string. Don't use a normal function, use an arrow function.
+
+var name = prompt("enter a  name : ")
+var greeting = "happy Birthday ! "
+let wishes = (greeting,name) => greeting+name;
+console.log(wishes(greeting,name))
+
+o/p:
+
+enter a  name : nandi
+happy Birthday ! nandi
+
+10.Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).
+
+11.
+12
+13
+14
+15
+
+16.Create a function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string.
+Example:
+
+charCount("c", "Chamber of secrets") ➞ 1
+
+a="Chamber of secrets"
+function findsinglechar(a)
+{
+    var count=0
+    
+    for (let i of a)
+    {
+        if  (i == "C")
+        {
+        
+        count++;
+        }
+    }
+   return count; 
+}
+console.log(findsinglechar(a));
+
+o/p:
+1
+
+17.Create a function that takes a string and returns the number (count) of vowels contained within it.
+Example:
+
+countVowels("Celebration") ➞ 5
+
+a="Celebration"
+function countVowels(a)
+{
+    var count=0
+    
+    for (let i of a)
+    {
+      if (i == "a" || i == "e" || i=="i" ||i=="o" || i=="u")
+      {
+          count++;
+      }
+    }
+   return count; 
+}
+console.log(countVowels(a));
+
+o/p:
+5
+
+18.
+
+19.
+  Take one integer n, loop till n and pass each value to a function, create a function that takes one integer parameter, and multiply with 2 in every integer.
+			
+			Input:      n=5
+			Output:   2 4 6 8 10
+       Explanation:  Loop start with 1 go till 5 bcoz n=5
+			1 x 2 =2, 2 x 2=4, 3 x 2=6 …..etc 
+
+var n=5;
+var a=" ";
+
+function mutliples0fn(n)
+{
+    for (let i =1;i<=n;i++)
+    {
+     a += 2*i+" ";
+    }
+    return a;
+}
+console.log(mutliples0fn(n));
+
+o/p:
+2 4 6 8 10
+
+20.Create Function that will take one parameter and return type of the data.
+			
+			Input:       500
+			Output:     Integer
+
+			Input:       Coding
+			Output:    String
+
+var input =  prompt()
+function to_identify_datatype(input)
+{
+    return (typeof input);
+}
+console.log(to_identify_datatype(input));
+
+o/p:
+500  string (i got an error)
+coding string
+
+
+21.
+
+22 . C Program to find factorial of number.
+		
+			Input: n=5
+			Output: 120
+
+			Explanation: 5 x 4 x 3 x 2 x 1 = 120
+
+var n=+prompt("enter number for to know the factorial value : ")
+function factorial(n)
+{
+    let sum=1;
+    for(let i=1;i<=5;i++)
+    {
+        sum*=i;
+    }
+    return sum;
+}
+console.log(factorial(n));
+
+o/p:
+
+enter number for to know the factorial value : 5
+120
+
+
+23.
+
+
+24. Print Patter using loop.
+
+			1
+			1 2
+			1 2 3
+			1 2 3 4
+  			1 2 3 4 5
+
+var n=+prompt("enter number for pattern: ")
+var st=" ";
+
+function pattern1(n)
+{
+    for(let i=1;i<=n;i++)
+    {
+        for (let j=1;j<=i;j++)
+        {
+            st = st + j ;
+        }
+    }
+    return st;
+  
+}
+console.log(pattern1(n));
+
+o/p:
+
+enter number for pattern: 5
+ 112123123412345 
+
+
+25. C Program to Calculate the Power of a Number(using loop only).
+
+			Input: n=5, p=3
+			Output: 5 ^ 3 = 125
+			Explanation: 5 x 5 x 5 = 125
+
+n=+prompt("enter a value to calculate power")
+p=+prompt("enter exponential value for number")
+
+function calculatepower(n,p)
+{
+    var sum=1;
+    for (let i=1;i<=p;i++)
+    {
+        sum = sum*n;
+    }
+    return sum;
+}
+console.log(" power of number " +n +" is number "+ p+" is exponential value  : " + calculatepower(n,p));
+
+
+
+
+
+26
+27
+28
+29
+
+30.30. Program to count vowels and consonants in a given String.
+
+			Input: i am ram
+			Output: 3 vowels 3 consonants.
+
+a="iamram"
+var vowels=0;
+var consonants=0;
+for(var i of a)
+{
+    
+    if(i == "a"||i == "e"||i == "i"||i == "o"||i == "u")
+    {
+      vowels++  
+    }
+    else{
+        consonants++;
+    }
+}
+console.log(vowels + " vowels " + consonants + " consonants ")
+
+o/p:
+
+3 vowels 3 consonants
+
+
+31.
+
+32.Reverse a number using while loop
+
+input :123
+output:321
+
+a=123
+var rem=0;sum=0;
+
+while(a>0)
+{
+    rem=a%10;
+    sum = (sum*10)+rem ;
+    a=Math.floor(a/10);
+}
+console.log(sum)
+
+
+o/p:
+321
+
+33.Count occurrence of number:
+
+			Input: [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10] , no find=7
+			Output: 7 present 2 times.
+a=[1,6,3,1,5,9,7,2,1,9,3,7,8,9,10]
+find=7
+var count=0;
+for(let i of a)
+{
+    if ( i == find)
+    {
+        count++
+    }
+}
+console.log(find + " present "+count+" times")
+
+o/p:
+7 present 2 times
+
+
